@@ -1,5 +1,6 @@
 import ReactPaginate from "react-paginate";
 import s from "./Pagination.module.css";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export default function Pagination({ onChangePage, totalPages, currentPage }) {
   const handlePageClick = (event) => {
@@ -11,12 +12,12 @@ export default function Pagination({ onChangePage, totalPages, currentPage }) {
       <div className={s.container}>
         <ReactPaginate
           forcePage={currentPage - 1 || 0}
-          nextLabel={"﹥"}
+          nextLabel={<ChevronRightIcon />}
           onPageChange={handlePageClick}
           pageRangeDisplayed={2}
           marginPagesDisplayed={1}
           pageCount={totalPages}
-          previousLabel={"﹤"}
+          previousLabel={<ChevronLeftIcon />}
           pageClassName={s.pageIitem}
           pageLinkClassName={s.pageLink}
           previousClassName=""
