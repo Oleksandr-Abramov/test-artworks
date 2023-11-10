@@ -69,7 +69,6 @@ const Main = () => {
   };
 
   const handleSubmitFilter = async (query) => {
-    console.log("query:", query);
     setQueryParams((prevState) => ({
       ...prevState,
       ...{ filter: { ...prevState.filter, ...query } },
