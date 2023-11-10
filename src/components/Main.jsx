@@ -89,7 +89,7 @@ const Main = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center mb-5">
+      <div className="flex items-center justify-center m-auto mb-5 w-full max-w-md px-5 py-2 bg-[#ffffff4a] shadow-md">
         <SearchForm onSubmit={handleSubmitSearch} />
         <button onClick={handleToggleOpenSideOver}>
           <AdjustmentsHorizontalIcon

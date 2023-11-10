@@ -57,7 +57,7 @@ export default function Modal({ isShowModal, closeModal, article }) {
                         aria-hidden="false"
                       />
                     </button>
-                    <div className="text-center">
+                    <div className="text-center mt-2">
                       <Dialog.Title
                         as="h3"
                         className="text-base font-semibold leading-6 text-gray-900"

@@ -13,10 +13,7 @@ function SearchForm({ onSubmit }) {
   };
 
   return (
-    <form
-      className="w-full max-w-md p-2 bg-[#ffffff4a] shadow-md"
-      onSubmit={handleSubmit}
-    >
+    <form className="w-full max-w-md " onSubmit={handleSubmit}>
       <div className="flex items-center border-b border-teal-500 py-2">
         <input
           type="text"
