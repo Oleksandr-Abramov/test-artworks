@@ -7,7 +7,6 @@ import SearchForm from "components/SearchForm";
 import MultiSelect from "components/MultiSelect";
 import artistsList from "data/artistsList";
 import stylesList from "data/stylesList";
-import createYearArray from "service/createYearArray";
 import RadioInput from "components/RadioInput";
 import Pagination from "components/Pagination";
 import SideOver from "components/SideOver";
