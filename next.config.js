@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: ["www.artic.edu"],
+    unoptimized: true,
   },
 };
 

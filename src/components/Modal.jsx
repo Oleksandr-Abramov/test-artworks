@@ -5,6 +5,10 @@ import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
+const UnImage = (props) => {
+  return <Image {...props} unoptimized />;
+};
+
 export default function Modal({ isShowModal, closeModal, article }) {
   const { title, thumbnail, image_id, description } = article;
 
@@ -61,7 +65,7 @@ export default function Modal({ isShowModal, closeModal, article }) {
                         {title}
                       </Dialog.Title>
                       <div className="mt-2">
-                        <Image
+                        <UnImage
                           className="w-full"
                           src={getImage(image_id, 843)}
                           alt={thumbnail?.alt_text}
