@@ -67,7 +67,11 @@ export default function Modal({ isShowModal, closeModal, article }) {
                       <div className="mt-2">
                         <UnImage
                           className="w-full"
-                          src={getImage(image_id, 843)}
+                          src={
+                            image_id
+                              ? getImage(image_id, 843)
+                              : "/img/default-image-300x300.jpg"
+                          }
                           alt={thumbnail?.alt_text}
                           width={843}
                           height={843}

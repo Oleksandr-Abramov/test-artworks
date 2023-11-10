@@ -13,6 +13,7 @@ import Pagination from "components/Pagination";
 import SideOver from "components/SideOver";
 import { AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
 import Loader from "components/Loader";
+import YearsInput from "components/YearsInput";
 
 const initialState = {
   searchQuery: "",
@@ -100,7 +101,7 @@ const Main = () => {
       </div>
       <SideOver isOpen={isOpenSideOver} close={() => setIsOpenSideOver(false)}>
         <p className="block text-gray-700 text-sm font-bold mt-4">
-          Select Artist
+          Select Artists
         </p>
         <MultiSelect
           onChange={handleSubmitFilter}
@@ -109,7 +110,7 @@ const Main = () => {
           field={"artist_id"}
         />
         <p className="block text-gray-700 text-sm font-bold mt-4">
-          Select Style
+          Select Styles
         </p>
         <MultiSelect
           onChange={handleSubmitFilter}
@@ -118,20 +119,18 @@ const Main = () => {
           selectedItems={queryParams.filter.style_id}
         />
         <p className="block text-gray-700 text-sm font-bold mt-4">
-          Select date start
+          Select the years of the beginning of creation
         </p>
-        <MultiSelect
+        <YearsInput
           onChange={handleSubmitFilter}
-          arr={createYearArray()}
           field={"date_start"}
           selectedItems={queryParams.filter.date_start}
         />
         <p className="block text-gray-700 text-sm font-bold mt-4">
-          Select date end
+          Select the years of the end of the creation
         </p>
-        <MultiSelect
+        <YearsInput
           onChange={handleSubmitFilter}
-          arr={createYearArray()}
           field={"date_end"}
           selectedItems={queryParams.filter.date_end}
         />

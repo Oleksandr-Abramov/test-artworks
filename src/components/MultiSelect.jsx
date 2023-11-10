@@ -1,4 +1,4 @@
-import Select from "react-tailwindcss-select";
+import Select from "react-select";
 
 const MultiSelect = ({ onChange, arr, field, selectedItems }) => {
   const options = arr.map((item) => ({
@@ -12,12 +12,11 @@ const MultiSelect = ({ onChange, arr, field, selectedItems }) => {
 
   return (
     <Select
-      isMultiple={true}
-      isSearchable={true}
       value={selectedItems}
       onChange={handleChange}
       options={options}
-      multiple
+      isMulti
+      placeholder="Search and select"
     />
   );
 };
