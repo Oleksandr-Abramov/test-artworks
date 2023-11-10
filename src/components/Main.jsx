@@ -69,6 +69,7 @@ const Main = () => {
   };
 
   const handleSubmitFilter = async (query) => {
+    console.log("query:", query);
     setQueryParams((prevState) => ({
       ...prevState,
       ...{ filter: { ...prevState.filter, ...query } },
@@ -178,6 +179,7 @@ const Main = () => {
         list={list}
         showLoader={() => setIsLoading(true)}
         hideLoader={() => setIsLoading(false)}
+        onFilter={handleSubmitFilter}
       />
       <Pagination
         onChangePage={handleChangePage}

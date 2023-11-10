@@ -2004,6 +2004,10 @@ const artistsList = [
     id: 20234,
   },
   {
+    title: "Jan Sanders van Hemessen",
+    id: 11328,
+  },
+  {
     title: "Manufacture Royale d’Aubusson",
     id: 108789,
   },
