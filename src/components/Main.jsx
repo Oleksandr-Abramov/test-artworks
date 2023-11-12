@@ -23,9 +23,10 @@ const Main = () => {
   const [list, setList] = useState([]);
   const [queryParams, setQueryParams] = useState(initialState);
   const [pagination, setPagination] = useState(initialPagination);
-  const [prevPage, setPrevPage] = useState(0);
   const [isOpenSideOver, setIsOpenSideOver] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  let prevPage = 0;
 
   const handleToggleOpenSideOver = () => setIsOpenSideOver(!isOpenSideOver);
 
@@ -53,7 +54,7 @@ const Main = () => {
   };
 
   const handleChangePage = (page) => {
-    setPrevPage(pagination.page);
+    prevPage = pagination.page;
     setPagination((prevState) => ({ ...prevState, ...page }));
   };
 
