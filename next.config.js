@@ -4,6 +4,7 @@ const nextConfig = {
     domains: ["www.artic.edu"],
     unoptimized: true,
   },
+  reactStrictMode: false,
 };
 
 module.exports = nextConfig;
